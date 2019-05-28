@@ -220,7 +220,7 @@ class TumblrRestClient(object):
         :returns: a dict created from the JSON response
         """
         url = "/v2/blog/{}/posts/draft".format(blogname)
-        return self.send_api_request("get", url, kwargs, ['filter'])
+        return self.send_api_request("get", url, kwargs, ['filter', 'before_id'])
 
     @validate_blogname
     def submission(self, blogname, **kwargs):
